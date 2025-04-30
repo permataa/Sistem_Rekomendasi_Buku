@@ -107,7 +107,8 @@ iface.launch(share=True)
 ## Preview Gradio UI  
 Antarmuka berikut dibangun menggunakan Gradio dan berjalan secara interaktif:
 
-![Screenshot (1071)](https://github.com/user-attachments/assets/2ca9d35d-5048-4cf1-8411-7fbde001f240)
+![Screenshot (1071)](https://github.com/user-attachments/assets/32f4c829-d8f2-4146-adbb-49696669f6cb)
+
 
 > Pengguna cukup memasukkan judul buku favorit, lalu sistem akan merekomendasikan buku-buku serupa berdasarkan metadata.
 
@@ -120,4 +121,4 @@ Proyek ini berhasil membangun sistem rekomendasi buku sederhana namun efektif be
 
 ## Penulis
 
-Proyek ini dikerjakan oleh Permata Ayu sebagai submission Proyek Akhir Machine Learning - Dicoding Academy. Terima kasih telah membaca 
+Proyek ini dikerjakan oleh Permata Ayu sebagai submission Proyek Akhir Machine Learning Terapan - Dicoding Academy. Terima kasih telah membaca 
