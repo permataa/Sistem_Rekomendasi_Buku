@@ -106,7 +106,7 @@ Model rekomendasi dibangun menggunakan Content-Based Filtering:
 
 
 Preview visualisasi:
-![Hasil Evaluasi Rekomendasi] ![Screenshot (1131)](https://github.com/user-attachments/assets/4a8c3907-a5fb-446f-8b87-ac559631383f)
+![Screenshot (1131)](https://github.com/user-attachments/assets/8b5e93f7-d3f3-49a7-8700-f84a5af16a85)
 ---
 
 ## Evaluation
@@ -120,8 +120,8 @@ Sistem rekomendasi ini dibangun untuk menjawab kebutuhan berikut:
 ### Evaluasi Model
 - **Presisi Manual**: 80% (4 dari 5 hasil rekomendasi dianggap relevan oleh pengguna).
 - **Problem Statement**:
-  - ✔ Apakah pengguna kesulitan menemukan buku serupa dari buku favorit? → Ya.
-  - ✔ Apakah sistem mampu memberikan rekomendasi berkualitas tinggi? → Ya, karena hasil disaring berdasarkan rating ≥ 4.0.
+  - Apakah pengguna kesulitan menemukan buku serupa dari buku favorit? → Ya.
+  - Apakah sistem mampu memberikan rekomendasi berkualitas tinggi? → Ya, karena hasil disaring berdasarkan rating ≥ 4.0.
 - **Goal Tercapai**:
   - Pengguna mendapatkan buku mirip secara isi dan popularitas.
   - Model tetap memberikan hasil meskipun input pengguna tidak eksak (melalui fallback logic).
@@ -150,8 +150,7 @@ iface.launch(share=True)
 ## Preview Gradio UI  
 Antarmuka berikut dibangun menggunakan Gradio dan berjalan secara interaktif:
 
-[Screenshot (1071)](https://github.com/user-attachments/assets/32f4c829-d8f2-4146-adbb-49696669f6cb)
-
+![Screenshot (1071)](https://github.com/user-attachments/assets/5a96e31d-5487-4ecc-8ade-b79af7fe1ea3)
 
 > Pengguna cukup memasukkan judul buku favorit, lalu sistem akan merekomendasikan buku-buku serupa berdasarkan metadata.
 
