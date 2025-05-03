@@ -74,21 +74,59 @@ Model rekomendasi dibangun menggunakan Content-Based Filtering:
 - Output berupa top-N buku serupa berdasarkan skor kemiripan tertinggi.
 - Hasil difilter menggunakan threshold minimal `average_rating` dan duplikat dihapus.
 
----
+### Cara Kerja Model
+1. Pengguna memasukkan judul buku yang diinginkan.
+2. Sistem mencari indeks buku tersebut di dataset.
+3. Menghitung skor kemiripan (cosine similarity) antara buku input dengan semua buku lainnya.
+4. Hanya buku dengan:
+   - Skor similarity tertinggi
+   - Rata-rata rating minimal 4.0
+   - Tidak duplikat
+   yang direkomendasikan ke pengguna.
+5. Sistem menampilkan top-N rekomendasi buku mirip dan berkualitas.
 
-## Evaluation
-
-Evaluasi dilakukan menggunakan presisi sederhana:
-
+6. Evaluasi dilakukan menggunakan presisi sederhana:
 - Input: `Harry Potter`
 - Output: 5 buku rekomendasi
 - Dari 5, sebanyak 4 buku dianggap relevan
 - Presisi = 4/5 = 80%
 
-Visualisasi hasil evaluasi disajikan dalam bentuk pie chart di notebook.
-
 > Metrik presisi sederhana cukup merepresentasikan kualitas sistem rekomendasi ini dalam konteks user-facing interface.
 
+
+#### Contoh Output Rekomendasi (Input: *Harry Potter*)
+
+| Judul Buku                                                                 | Penulis       | Penerbit        | Rating | Similarity |
+|----------------------------------------------------------------------------|---------------|------------------|--------|------------|
+| Harry Potter and the Order of the Phoenix (Harry Potter #5)               | J.K. Rowling  | Scholastic Inc. | 4.5    | 0.88       |
+| Harry Potter and the Prisoner of Azkaban (Harry Potter #3)                | J.K. Rowling  | Scholastic Inc. | 4.6    | 0.86       |
+| Harry Potter and the Chamber of Secrets (Harry Potter #2)                 | J.K. Rowling  | Scholastic Inc. | 4.4    | 0.85       |
+| Harry Potter and the Sorcerer's Stone (Harry Potter #1)                   | J.K. Rowling  | Scholastic Inc. | 4.7    | 0.84       |
+| [Fallback Buku Populer] (jika input tidak ditemukan)                      | -             | -               | ≥4.0   | -          |
+
+
+Preview visualisasi:
+![Hasil Evaluasi Rekomendasi] ![Screenshot (1131)](https://github.com/user-attachments/assets/4a8c3907-a5fb-446f-8b87-ac559631383f)
+---
+
+## Evaluation
+### Keterkaitan dengan Business Understanding
+
+Sistem rekomendasi ini dibangun untuk menjawab kebutuhan berikut:
+- Membantu pengguna menemukan buku yang relevan dan berkualitas berdasarkan kesukaan mereka.
+- Meningkatkan pengalaman pengguna dalam platform penyedia buku digital.
+- Meningkatkan waktu interaksi dan potensi pembelian pengguna terhadap buku-buku yang disarankan.
+
+### Evaluasi Model
+- **Presisi Manual**: 80% (4 dari 5 hasil rekomendasi dianggap relevan oleh pengguna).
+- **Problem Statement**:
+  - ✔ Apakah pengguna kesulitan menemukan buku serupa dari buku favorit? → Ya.
+  - ✔ Apakah sistem mampu memberikan rekomendasi berkualitas tinggi? → Ya, karena hasil disaring berdasarkan rating ≥ 4.0.
+- **Goal Tercapai**:
+  - Pengguna mendapatkan buku mirip secara isi dan popularitas.
+  - Model tetap memberikan hasil meskipun input pengguna tidak eksak (melalui fallback logic).
+- **Dampak Solusi**:
+  - Membantu pengguna menemukan buku yang sesuai dengan selera mereka, meningkatkan retensi dan kepuasan pengguna terhadap layanan.
 ---
 
 ## Deployment
