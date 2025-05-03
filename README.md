@@ -36,13 +36,18 @@ Dataset yang digunakan berasal dari Kaggle, terdiri dari lebih dari 10.000 buku.
 [Dataset Link](https://www.kaggle.com/datasets/jealousleopard/goodreadsbooks)
 
 ### Fitur-fitur:
-- `title`: Judul buku
-- `authors`: Nama penulis
-- `average_rating`: Rata-rata rating pengguna
-- `ratings_count`: Jumlah rating
-- `text_reviews_count`: Jumlah ulasan teks
-- `publisher`: Nama penerbit
-- `language_code`: Kode bahasa
+- BookID: Identifier unik untuk setiap buku (tipe data: integer).
+- title: Judul buku (tipe data: string/object).
+- authors: Nama penulis buku (tipe data: string/object).
+- average_rating: Rata-rata rating yang diberikan oleh pengguna (tipe data: float).
+- isbn: Nomor ISBN buku (tipe data: string/object).
+- isbn13: Nomor ISBN 13-digit buku (tipe data: integer).
+- language_code: Kode bahasa yang digunakan dalam buku (tipe data: string/object).
+- num_pages: Jumlah halaman buku (tipe data: integer).
+- ratings_count: Jumlah total rating yang diberikan oleh pengguna (tipe data: integer).
+- text_reviews_count: Jumlah ulasan teks yang diberikan oleh pengguna (tipe data: integer).
+- publication_date: Tanggal publikasi buku (tipe data: string/object).
+- publisher: Nama penerbit buku (tipe data: string/object).
 
 ### Exploratory Data Analysis (EDA)
 - Distribusi nilai `average_rating`
