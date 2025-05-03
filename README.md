@@ -37,17 +37,17 @@ Dataset yang digunakan berasal dari Kaggle, terdiri dari lebih dari 10.000 buku.
 
 ### Fitur-fitur:
 - BookID: Identifier unik untuk setiap buku (tipe data: integer).
-- title: Judul buku (tipe data: string/object).
-- authors: Nama penulis buku (tipe data: string/object).
-- average_rating: Rata-rata rating yang diberikan oleh pengguna (tipe data: float).
-- isbn: Nomor ISBN buku (tipe data: string/object).
-- isbn13: Nomor ISBN 13-digit buku (tipe data: integer).
-- language_code: Kode bahasa yang digunakan dalam buku (tipe data: string/object).
-- num_pages: Jumlah halaman buku (tipe data: integer).
-- ratings_count: Jumlah total rating yang diberikan oleh pengguna (tipe data: integer).
-- text_reviews_count: Jumlah ulasan teks yang diberikan oleh pengguna (tipe data: integer).
-- publication_date: Tanggal publikasi buku (tipe data: string/object).
-- publisher: Nama penerbit buku (tipe data: string/object).
+- Title: Judul buku (tipe data: string/object).
+- Authors: Nama penulis buku (tipe data: string/object).
+- Average_rating: Rata-rata rating yang diberikan oleh pengguna (tipe data: float).
+- Isbn: Nomor ISBN buku (tipe data: string/object).
+- Isbn13: Nomor ISBN 13-digit buku (tipe data: integer).
+- Language_code: Kode bahasa yang digunakan dalam buku (tipe data: string/object).
+- Num_pages: Jumlah halaman buku (tipe data: integer).
+- Ratings_count: Jumlah total rating yang diberikan oleh pengguna (tipe data: integer).
+- Text_reviews_count: Jumlah ulasan teks yang diberikan oleh pengguna (tipe data: integer).
+- Publication_date: Tanggal publikasi buku (tipe data: string/object).
+- Publisher: Nama penerbit buku (tipe data: string/object).
 
 ### Exploratory Data Analysis (EDA)
 - Distribusi nilai `average_rating`
@@ -150,7 +150,7 @@ iface.launch(share=True)
 ## Preview Gradio UI  
 Antarmuka berikut dibangun menggunakan Gradio dan berjalan secara interaktif:
 
-![Screenshot (1071)](https://github.com/user-attachments/assets/32f4c829-d8f2-4146-adbb-49696669f6cb)
+[Screenshot (1071)](https://github.com/user-attachments/assets/32f4c829-d8f2-4146-adbb-49696669f6cb)
 
 
 > Pengguna cukup memasukkan judul buku favorit, lalu sistem akan merekomendasikan buku-buku serupa berdasarkan metadata.
